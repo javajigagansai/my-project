@@ -1,0 +1,17 @@
+{
+  "name": "priceverse",
+  "version": "1.0.0",
+  "description": "Next-Gen Price Comparison Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": ["price-comparison", "e-commerce", "shopping", "ai", "ar", "vr"],
+  "author": "",
+  "license": "MIT"
+}

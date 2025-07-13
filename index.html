@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceVerse - Next-Gen Price Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-infinity brand-icon"></i>
+                <span class="brand-text">PriceVerse</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#deals" class="nav-link">Live Deals</a>
+                <a href="#ar-preview" class="nav-link">AR Preview</a>
+                <a href="#metaverse" class="nav-link">Metaverse</a>
+            </div>
+            <div class="nav-actions">
+                <button class="voice-search-btn" title="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="ar-btn" title="AR Mode">
+                    <i class="fas fa-cube"></i>
+                </button>
+                <button class="profile-btn">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                The Future of
+                <span class="gradient-text">Price Comparison</span>
+            </h1>
+            <p class="hero-subtitle">
+                Real-time prices across the multiverse. AI-powered insights. 
+                Quantum-verified authenticity. Experience shopping reimagined.
+            </p>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search across dimensions... Try 'best noise-canceling headphones under $200'" class="search-input">
+                    <button class="neural-search-btn" title="Neural Search">
+                        <i class="fas fa-brain"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggestion-tag">iPhone 15 Pro</span>
+                    <span class="suggestion-tag">Gaming Laptops</span>
+                    <span class="suggestion-tag">Smart Watches</span>
+                    <span class="suggestion-tag">Wireless Earbuds</span>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Products Tracked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Retailers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100ms</div>
+                    <div class="stat-label">Load Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Price Tracking -->
+    <section class="live-tracking">
+        <div class="container">
+            <h2 class="section-title">Live Price Tracking</h2>
+            <div class="tracking-grid">
+                <div class="tracking-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=300" alt="iPhone">
+                        <div class="price-change down">-$50</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <div class="price-comparison">
+                            <div class="current-price">$1,149</div>
+                            <div class="old-price">$1,199</div>
+                        </div>
+                        <div class="price-chart">
+                            <canvas class="mini-chart" width="200" height="60"></canvas>
+                        </div>
+                        <div class="retailers">
+                            <span class="retailer amazon">Amazon: $1,149</span>
+                            <span class="retailer apple">Apple: $1,199</span>
+                            <span class="retailer bestbuy">Best Buy: $1,179</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracking-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=300" alt="Laptop">
+                        <div class="price-change up">+$25</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MacBook Pro 16"</h3>
+                        <div class="price-comparison">
+                            <div class="current-price">$2,524</div>
+                            <div class="old-price">$2,499</div>
+                        </div>
+                        <div class="price-chart">
+                            <canvas class="mini-chart" width="200" height="60"></canvas>
+                        </div>
+                        <div class="retailers">
+                            <span class="retailer apple">Apple: $2,499</span>
+                            <span class="retailer amazon">Amazon: $2,524</span>
+                            <span class="retailer bestbuy">Best Buy: $2,549</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracking-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Headphones">
+                        <div class="price-change down">-$30</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM5</h3>
+                        <div class="price-comparison">
+                            <div class="current-price">$369</div>
+                            <div class="old-price">$399</div>
+                        </div>
+                        <div class="price-chart">
+                            <canvas class="mini-chart" width="200" height="60"></canvas>
+                        </div>
+                        <div class="retailers">
+                            <span class="retailer sony">Sony: $399</span>
+                            <span class="retailer amazon">Amazon: $369</span>
+                            <span class="retailer bestbuy">Best Buy: $379</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card electronics">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Quantum-verified gadgets</p>
+                    <div class="category-stats">
+                        <span>2.5M+ products</span>
+                        <span class="live-indicator">Live tracking</span>
+                    </div>
+                </div>
+
+                <div class="category-card fashion">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Fashion</h3>
+                    <p>AR try-on enabled</p>
+                    <div class="category-stats">
+                        <span>5M+ products</span>
+                        <span class="ar-indicator">AR Ready</span>
+                    </div>
+                </div>
+
+                <div class="category-card home">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home & Garden</h3>
+                    <p>3D placement preview</p>
+                    <div class="category-stats">
+                        <span>1.8M+ products</span>
+                        <span class="vr-indicator">VR Compatible</span>
+                    </div>
+                </div>
+
+                <div class="category-card automotive">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Automotive</h3>
+                    <p>Holographic inspections</p>
+                    <div class="category-stats">
+                        <span>800K+ products</span>
+                        <span class="holo-indicator">Holographic</span>
+                    </div>
+                </div>
+
+                <div class="category-card health">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health & Beauty</h3>
+                    <p>Biometric compatibility</p>
+                    <div class="category-stats">
+                        <span>3.2M+ products</span>
+                        <span class="bio-indicator">Bio-verified</span>
+                    </div>
+                </div>
+
+                <div class="category-card sports">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Sports & Fitness</h3>
+                    <p>Performance analytics</p>
+                    <div class="category-stats">
+                        <span>1.5M+ products</span>
+                        <span class="ai-indicator">AI Powered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features -->
+    <section class="ai-features">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Intelligence</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neural Search</h3>
+                    <p>Think it, find it. Our brain-computer interface reads your shopping intent directly from neural patterns.</p>
+                    <div class="feature-demo">
+                        <div class="neural-wave"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-crystal-ball"></i>
+                    </div>
+                    <h3>Quantum Predictions</h3>
+                    <p>Predict future prices with 99.7% accuracy using quantum computing and temporal analysis algorithms.</p>
+                    <div class="feature-demo">
+                        <div class="quantum-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>DNA Personalization</h3>
+                    <p>Genetically tailored recommendations based on your unique DNA profile and metabolic preferences.</p>
+                    <div class="feature-demo">
+                        <div class="dna-helix"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>Interplanetary Shipping</h3>
+                    <p>Compare prices across Earth, Mars colonies, and asteroid mining stations with real-time delivery tracking.</p>
+                    <div class="feature-demo">
+                        <div class="solar-system">
+                            <div class="planet earth"></div>
+                            <div class="planet mars"></div>
+                            <div class="asteroid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AR/VR Preview -->
+    <section id="ar-preview" class="ar-section">
+        <div class="container">
+            <div class="ar-content">
+                <div class="ar-text">
+                    <h2>Immersive Shopping Experience</h2>
+                    <p>Step into the future of retail with our holographic product previews, AR try-ons, and virtual showrooms.</p>
+                    <div class="ar-features">
+                        <div class="ar-feature">
+                            <i class="fas fa-cube"></i>
+                            <span>3D Holographic Display</span>
+                        </div>
+                        <div class="ar-feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Virtual Try-On</span>
+                        </div>
+                        <div class="ar-feature">
+                            <i class="fas fa-home"></i>
+                            <span>Room Placement</span>
+                        </div>
+                        <div class="ar-feature">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>VR Showrooms</span>
+                        </div>
+                    </div>
+                    <button class="cta-button ar-cta">
+                        <i class="fas fa-play"></i>
+                        Launch AR Experience
+                    </button>
+                </div>
+                <div class="ar-demo">
+                    <div class="hologram-container">
+                        <div class="hologram-product">
+                            <div class="product-3d">
+                                <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Product">
+                            </div>
+                            <div class="hologram-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Deals -->
+    <section id="deals" class="deals-section">
+        <div class="container">
+            <h2 class="section-title">Quantum Flash Deals</h2>
+            <div class="deals-timer">
+                <div class="timer-item">
+                    <span class="timer-number" id="hours">23</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-number" id="minutes">45</span>
+                    <span class="timer-label">Minutes</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-number" id="seconds">12</span>
+                    <span class="timer-label">Seconds</span>
+                </div>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card featured">
+                    <div class="deal-badge">Quantum Deal</div>
+                    <img src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Headphones">
+                    <div class="deal-info">
+                        <h3>Sony WH-1000XM5</h3>
+                        <div class="deal-prices">
+                            <span class="deal-price">$299</span>
+                            <span class="original-price">$399</span>
+                            <span class="discount">25% OFF</span>
+                        </div>
+                        <div class="deal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 67%"></div>
+                            </div>
+                            <span class="progress-text">67% claimed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-badge">Flash Sale</div>
+                    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=300" alt="Laptop">
+                    <div class="deal-info">
+                        <h3>Gaming Laptop RTX 4080</h3>
+                        <div class="deal-prices">
+                            <span class="deal-price">$1,899</span>
+                            <span class="original-price">$2,299</span>
+                            <span class="discount">17% OFF</span>
+                        </div>
+                        <div class="deal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 34%"></div>
+                            </div>
+                            <span class="progress-text">34% claimed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-badge">Limited Time</div>
+                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Smartphone">
+                    <div class="deal-info">
+                        <h3>iPhone 15 Pro</h3>
+                        <div class="deal-prices">
+                            <span class="deal-price">$949</span>
+                            <span class="original-price">$999</span>
+                            <span class="discount">5% OFF</span>
+                        </div>
+                        <div class="deal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 89%"></div>
+                            </div>
+                            <span class="progress-text">89% claimed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Transparency -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Blockchain-Verified Trust</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quantum Security</h3>
+                    <p>Every price, review, and transaction is secured with quantum encryption and blockchain verification.</p>
+                    <div class="trust-metric">
+                        <span class="metric-value">99.99%</span>
+                        <span class="metric-label">Security Score</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>AI-Verified Reviews</h3>
+                    <p>Biometric authentication and AI analysis ensure every review comes from verified purchasers.</p>
+                    <div class="trust-metric">
+                        <span class="metric-value">100%</span>
+                        <span class="metric-label">Authentic Reviews</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Carbon Neutral</h3>
+                    <p>Real-time carbon footprint tracking with automatic offset purchasing for every transaction.</p>
+                    <div class="trust-metric">
+                        <span class="metric-value">0kg</span>
+                        <span class="metric-label">Net Carbon Impact</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Transparency</h3>
+                    <p>Open-source algorithms and public blockchain ledger ensure complete transparency in all operations.</p>
+                    <div class="trust-metric">
+                        <span class="metric-value">100%</span>
+                        <span class="metric-label">Transparency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metaverse Shopping -->
+    <section id="metaverse" class="metaverse-section">
+        <div class="container">
+            <div class="metaverse-content">
+                <div class="metaverse-text">
+                    <h2>Welcome to the Shopping Metaverse</h2>
+                    <p>Enter virtual malls, attend live product launches, and shop with friends across dimensions in our immersive metaverse experience.</p>
+                    <div class="metaverse-features">
+                        <div class="meta-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Social Shopping Parties</span>
+                        </div>
+                        <div class="meta-feature">
+                            <i class="fas fa-store"></i>
+                            <span>Virtual Showrooms</span>
+                        </div>
+                        <div class="meta-feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>Avatar Interactions</span>
+                        </div>
+                        <div class="meta-feature">
+                            <i class="fas fa-coins"></i>
+                            <span>NFT Rewards</span>
+                        </div>
+                    </div>
+                    <button class="cta-button meta-cta">
+                        <i class="fas fa-rocket"></i>
+                        Enter Metaverse
+                    </button>
+                </div>
+                <div class="metaverse-visual">
+                    <div class="virtual-world">
+                        <div class="avatar avatar-1"></div>
+                        <div class="avatar avatar-2"></div>
+                        <div class="avatar avatar-3"></div>
+                        <div class="virtual-store"></div>
+                        <div class="floating-products">
+                            <div class="floating-product"></div>
+                            <div class="floating-product"></div>
+                            <div class="floating-product"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-infinity brand-icon"></i>
+                        <span class="brand-text">PriceVerse</span>
+                    </div>
+                    <p>Redefining commerce across dimensions with quantum-powered price intelligence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Web App</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">AR/VR Interface</a></li>
+                        <li><a href="#">Neural Implant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Price Tracking</a></li>
+                        <li><a href="#">AI Recommendations</a></li>
+                        <li><a href="#">Quantum Predictions</a></li>
+                        <li><a href="#">Metaverse Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">AI Assistant</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PriceVerse. All rights reserved across all dimensions.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Quantum Ethics</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab-main" id="fabMain">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <button class="fab-item" title="Voice Search">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button class="fab-item" title="AR Mode">
+                <i class="fas fa-cube"></i>
+            </button>
+            <button class="fab-item" title="Price Alert">
+                <i class="fas fa-bell"></i>
+            </button>
+            <button class="fab-item" title="Neural Interface">
+                <i class="fas fa-brain"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
